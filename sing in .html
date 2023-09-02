@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    
+    .video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+    }
+    
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding-top: 100px;
+    }
+    
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 20px 40px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    
+    .button:hover {
+      background-color: orange;
+      transform: scale(1.1);
+    }
+    
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="password"],
+    .form-container textarea {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    
+    .form-container button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: orange;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .form-container button:hover {
+      background-color: darkorange;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <video class="video" autoplay loop muted>
+      <source src="Video/4K Beautiful Anime Scenery.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="content">
+    <h1>Sign In</h1>
+    <div class="button-container">
+      <a class="button" href="#">Sign in with Email</a>
+      <a class="button" href="#">Sign in with Google</a>
+    </div>
+    <div class="form-container">
+      <form>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="text" placeholder="Username" required>
+        <textarea placeholder="Address" rows="4"></textarea>
+        <button type="submit">Sign In</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

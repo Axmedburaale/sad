@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Video Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background Video */
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+            color: #fff;
+        }
+
+        /* Glowing Unordered List */
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 40px 0;
+        }
+
+        ul li {
+            margin: 0 10px;
+            position: relative;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+        }
+
+        ul li a:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            width: 0;
+            height: 2px;
+            background-color: #fff;
+            transition: width 0.3s ease-in-out;
+        }
+
+        ul li a:hover:before {
+            width: 100%;
+            left: 0;
+            background-color: blue;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <video id="background-video" autoplay loop muted>
+        <source src="Video/4K Beautiful Anime Scenery.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <h1>Welcome to My Website</h1>
+        <ul>
+            <li><a href="tus.html" target="_blank">Home</a></li>
+            <li><a href="sad.html">About</a></li>
+            <li><a href="tas.html">Services</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
